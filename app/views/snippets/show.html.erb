@@ -4,7 +4,4 @@
   <%= @snippet.snippet_text %>
 </p>
 
-
-<input type="textarea" value=<%= @snippet.snippet_text %> required class="form-control" >
-
 <input type="link" name="link" placeholder="Insert link"   value=<%= request.host_with_port %>/<%= @snippet.share_url%> required class="form-control" 0>
