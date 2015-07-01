@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  resources :snippets
+
+  get 'snippets/private/:slug' => 'snippets#private_snippet'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'snippets#index'
+
+   get 'recent_snippet' => 'snippets#recent_snippet'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
