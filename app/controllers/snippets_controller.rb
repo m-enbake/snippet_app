@@ -76,7 +76,6 @@ class SnippetsController < ApplicationController
   end
 
   def recent_snippet
-    byebug
       @snippets = Snippet.last(params[:count])
       respond_to do |format|    
         format.html { redirect_to @snippets, notice: 'Snippet was successfully created.' }
